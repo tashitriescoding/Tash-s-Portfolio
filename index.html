@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tash's desktop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6L3.4 9.5l6-.8z" fill="currentColor" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol></svg>
+<div class="toggles">
+  <button class="tg" id="sfx" aria-pressed="false" aria-label="Toggle sound effects" data-tip="sound effects are off. click to turn them on">♪</button>
+  <button class="tg" id="theme" aria-pressed="false" aria-label="Toggle dark mode" data-tip="switch to dark mode">☾</button>
+  <button class="tg" id="tidy" aria-label="Tidy up: put everything back" data-tip="put everything back where it started">⟲</button>
+</div>
+
+<span class="corner" style="left:18px;top:calc(18px + env(safe-area-inset-top,0px))"><b>Tashi's</b><br>portfolio</span>
+<span class="corner" style="right:18px;bottom:62px">Let's Work Together! ᯓ★</span>
+<main class="stage">
+  <div id="hero"><div class="hi"><svg class="st" aria-hidden="true" style="left:-3%;top:-24%;--s:26px;--c:var(--accent);--d:3.4s;--dl:0s;--r:-14deg"><use href="#star"/></svg><svg class="st" aria-hidden="true" style="left:-9%;top:52%;--s:15px;--c:#A6C1F8;--d:4.2s;--dl:-1.2s;--r:10deg"><use href="#star"/></svg><svg class="st" aria-hidden="true" style="left:38%;top:-40%;--s:15px;--c:var(--blue2);--d:3.8s;--dl:-2s;--r:8deg"><use href="#star"/></svg><svg class="st" aria-hidden="true" style="right:-2%;top:-28%;--s:22px;--c:#A6C1F8;--d:3.1s;--dl:-.6s;--r:16deg"><use href="#star"/></svg><svg class="st" aria-hidden="true" style="right:-8%;top:58%;--s:14px;--c:var(--accent);--d:4.5s;--dl:-1.8s;--r:-10deg"><use href="#star"/></svg><svg class="st" aria-hidden="true" style="left:-5%;bottom:-6%;--s:11px;--c:var(--blue2);--d:3.6s;--dl:-2.6s;--r:12deg"><use href="#star"/></svg><svg class="st" aria-hidden="true" style="right:-5%;bottom:-4%;--s:13px;--c:#A6C1F8;--d:4s;--dl:-.9s;--r:-8deg"><use href="#star"/></svg><h1>hi! i’m<b>Tash</b></h1></div>
+  <p class="role">2nd Year <b>Computer Science </b>Student from <b>USC</b></p></div>
+  <nav class="icons" id="icons" aria-label="Sections"></nav>
+</main>
+
+<aside class="dock" aria-label="Player">
+  <img class="pet" id="pet" src="miffy.png" alt="Miffy holding a balloon" draggable="false">
+  <button class="play" id="play" data-tip="play the background music">play ♪</button>
+</aside>
+
+<footer class="foot">
+  <a href="https://www.instagram.com/hi__tash.i7/" aria-label="instagram" data-tip="find me on insta">i</a> <a href="https://www.facebook.com/tash07lim/" aria-label="Facebook" data-tip="Let's be friends on FB!">fb</a><a href="https://github.com/tashitriescoding" aria-label="Github" data-tip="follow my journey on Github!">g</a>
+  <span>© 2026 Tash Santiago</span><span>drag anything around!</span>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-label="Notice"><div>
+  <h2>hi there, thanks for visiting!</h2>
+  <p>this site is best experienced on desktop. some features might be wonky on other devices.</p>
+  <button class="btn" id="okay" data-tip="close this notice">okay</button>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
