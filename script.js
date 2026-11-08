@@ -57,6 +57,7 @@ const PROJECTS = [
    tags:["hackathon","fitness app","gamified"],
    link:"", cta:"view live project"},    // add a link (demo, repo, video...) here when you have one
   {id:"umimatcha", title:"Umi Matcha Menu Queue", tag:"Web app · menu & order queue",
+   thumb:"projects/umi-matcha-cover.png",
    shots:[],   // e.g. ["projects/umi-matcha-1.png","projects/umi-matcha-2.png"]
    desc:"A menu and order queue web app for Umi Matcha. Edit this: say who it was for, what it lets people do, and what you built.",
    tags:["Hosted on Vercel"],
