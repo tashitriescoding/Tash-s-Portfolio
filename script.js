@@ -25,7 +25,7 @@ const PROJECTS = [
      {src:"projects/kanato-spread.png", alt:"KANATO UI overview with three screens: civic reporting form, civic feed, and civic statistics"},
      {src:"projects/kanato-feed.png", alt:"KANATO civic feed listing reported issues such as potholes and flooding, with category filters, vote counts and status labels", fit:"top"}
    ],
-   desc:"A civic engagement app made for the HackUSC 2026 Hackathon, where it won 1st place. It was hosted on Google Apps Script, with its database based in Google Sheets, and it was built using both JavaScript and HTML.<br><br><b>Note:</b> signing in to the app may not be accessible to visitors, so please go through the photo carousel above to look through a demo.",
+   desc:"A civic engagement app made for the HackUSC 2026 Hackathon, where it won 1st place. It was hosted on Google Apps Script, with its database based in Google Sheets, and it was built using both JavaScript and HTML.<br><br><b>Note:</b> signing in to the app may not be accessible to visitors, so please go through the photo carousel above to look through the demo.",
    tags:["Backend: Google Apps Script","Database: Google Sheets","Languages: JavaScript & HTML","Hosted on Google Apps Script"],
    link:"https://script.google.com/macros/s/AKfycbxSuQ9QELKLqfIgR2xi6x7R1E6VVtZWCekoRB31jXfH6QeT-58Graaxe9pUnUbkUr4/exec", cta:"view live project"},
   {id:"oneatatime", title:"One at a Time", tag:"Personal project · study aid",
@@ -55,7 +55,12 @@ const PROJECTS = [
    ],
    desc:"My first hackathon submission, entered as a finalist in Accenture’s 2025 Breaking Barriers, Building Bridges Hackathon for Girls. HAKABAO is a gamified step tracking fitness app with a digital walking companion, designed to encourage Cebuanos to stay active by walking through the city instead of relying on vehicles.",
    tags:["hackathon","fitness app","gamified"],
-   link:"", cta:"view live project"}    // add a link (demo, repo, video...) here when you have one
+   link:"", cta:"view live project"},    // add a link (demo, repo, video...) here when you have one
+  {id:"umimatcha", title:"Umi Matcha Menu Queue", tag:"Web app · menu & order queue",
+   shots:[],   // e.g. ["projects/umi-matcha-1.png","projects/umi-matcha-2.png"]
+   desc:"A menu and order queue web app for Umi Matcha. Edit this: say who it was for, what it lets people do, and what you built.",
+   tags:["Hosted on Vercel"],
+   link:"https://umi-matcha-menu-queue.vercel.app/#menu", cta:"view live project"}
 ];
 const shotOf = (p,i)=>{ const s=p.shots[i]; return typeof s==="string"?{src:s,alt:`${p.title} screenshot ${i+1}`}:s; };
 const projCards = ()=>`<div class="grid">${PROJECTS.map(p=>`<button class="gal" data-open="proj-${p.id}" data-tip="open ${p.title}"><b${p.thumb||p.shots.length?` style="background-image:url('${p.thumb||shotOf(p,0).src}')"`:""}></b><small>${p.title}</small></button>`).join("")}<div class="gal soon"><b style="background-image:url('projects/more-projects.png')" role="img" aria-label="a hamster typing on a laptop"></b><small>more projects to come</small></div></div>`;
@@ -74,28 +79,28 @@ const projWin = p=>({title:p.title, cls:"proj-win", html:
    <p>${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener noreferrer" aria-label="${p.cta} for ${p.title} (opens in a new tab)" data-tip="open ${p.title} in a new tab">${p.cta}</a>`:`<span class="btn off" aria-disabled="true" data-tip="no link yet">link coming soon</span>`}</p>`});
 const row = (t,url)=>`<a class="linkrow" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="${t} (opens in a new tab)" data-tip="open ${t} in a new tab">${t}</a>`;
 const WIN = {
-  about:{title:"about", html:`<div class="me"><div class="av"></div><div><b>${ME.name}</b><br>based in Cebu City, Philippines<br><span class="note">BS Computer Science student · aspiring developer</span></div></div>
+  about:{title:"about", html:`<div class="me"><div class="av"></div><div><b>${ME.name}</b><br>based in Cebu City, Philippines<br><span class="note">BS Computer Science student · hackathon winner</span></div></div>
     <hr><p>hi! i’m ${ME.name}, a computer science student at the University of San Carlos. i…</p>
-    <ul><li>build apps and web projects</li><li>design interfaces and wireframes in <b>Figma</b></li><li>practice frontend web development</li><li>compete in <b>hackathons, capture the flag (CTF), and case study innovation events</b>!</li></ul>
+    <ul><li>build apps and web projects,</li><li>design interfaces and wireframes in Figma,</li><li>do frontend web development, and</li><li>compete in hackathons and capture the flag (CTF) events!</li></ul>
     <p>interested in working together? send me an email at ${ME.email} :)</p>
     <h3>HIGHLIGHTS</h3>
-    <ul><li><b>1st place</b>, HackUSC Hackathon (2026) with KANATO, a civic engagement app</li><li><b>Top 10</b>, Accenture Breaking Barriers, Building Bridges Hackathon (2025) with <b>HAKABAO</b>, a gamified fitness step tracker</li><li><b>Top 5</b>, Line Following Robot, USC RoboCon 2025</li></ul>
+    <ul><li><b>1st place</b>, HackUSC Hackathon (2026) with KANATO, a civic engagement app</li><li><b>Top 10</b>, Accenture Breaking Barriers, Building Bridges Hackathon (2025) with HAKABAO, a gamified fitness step tracker</li><li><b>Top 5</b>, Line Following Robot, USC RoboCon 2025</li></ul>
     <h3>EDUCATION</h3><p><b>BS Computer Science</b>, University of San Carlos – Talamban Campus (2025–present)<br><b>STEM</b>, University of San Carlos – North Campus (2023–2025)</p>
     <h3>INVOLVEMENT</h3>
-    <ul><li><b>External Relations and Logistics Head Officer</b>, Google Developer Groups on Campus USC</li><li><b>Head Secretary</b>, Innovare: USC Competition Guild</li><li><b>PRO, Secretary, and Vice President</b>, Cebu Centennial Leo Club (2023–2026)</li><li><b>Member</b>, Moriarity CTF team (Capture the Flag)</li></ul>
+    <ul><li>External Relations and Logistics Head Officer, Google Developer Groups on Campus USC</li><li>Head Secretary, Innovare: USC Competition Guild</li><li>PRO, Secretary, and Vice President, Cebu Centennial Leo Club (2023–2026)</li><li>Member, Moriarity CTF team</li></ul>
     <h3>OTHER INTERESTS</h3><div class="pills"><span>games</span><span>reading</span><span>baking</span><span>puzzles</span><span>language learning</span></div>
-    <h3>LANGUAGES (Conversational & Learning)</h3><p>English, Bisaya, Mandarin, Korean</p>`},
+    <h3>LANGUAGES (Conversational & Learning)</h3><p>English, Bisaya, Chinese</p>`},
   links:{title:"links", html:`${row("instagram","https://www.instagram.com/hi__tash.i7/")}${row("facebook","https://www.facebook.com/tash07lim/")}${row("github","https://github.com/tashitriescoding")}<p class="note">clicking any link opens a new tab!</p>`},
   work:{title:"work", html:`<p><b>Accepting work offers via my work email!</b><br>I do web design, and development, promotional material graphics, and more! :)</p>
     <h3>PROJECTS</h3>${projCards()}
     <h3>TOOLS</h3><div class="pills"><span>Google Workspace</span><span>n8n</span><span>Notion</span><span>Canva</span><span>Affinity</span><span>Figma</span></div>
     <h3>DEVELOPMENT</h3><div class="pills"><span>JavaScript</span><span>HTML/CSS</span><span>C</span></div>
 `},
-  faq:{title:"frequently asked questions", html:`<details open><summary>are you open for commissions?</summary><p>Yes! Email me with the details („• ֊ •„)</p></details>
-    <details><summary>what tools do you use?</summary><p>See the work window for the full list!</p></details>`},
+  faq:{title:"frequently asked questions", html:`<details open><summary>are you open for commissions?</summary><p>Yes! Email me with the details.</p></details>
+    <details><summary>what tools do you use?</summary><p>See the work window for the full list.</p></details>`},
   contact:{title:"contact", html:`<h2>yayy mail!</h2><p>the easiest way to contact me is through email! i don’t really check my social media messages, so please direct questions to my email instead.</p>
     <p>email me at: <b>${ME.email}</b><br>or press the button below to open a draft in Gmail.</p><a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(ME.email)}" target="_blank" rel="noopener noreferrer" aria-label="send me an email (opens a Gmail draft in a new tab)" data-tip="opens a Gmail draft in a new tab">send me an email!</a>`},
-  downloads:{title:"fun stuff", html:`<p>fun personal projects for your enjoyment coming soon! <br>ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</br></p>`}
+  downloads:{title:"fun stuff", html:`<p>fun personal projects for your enjoyment coming soon!</p>`}
 };
 PROJECTS.forEach(p=>{ WIN["proj-"+p.id]=projWin(p); });
 /* ===== ENGINE ===== */
